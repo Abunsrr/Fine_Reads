@@ -2,10 +2,9 @@
 
 Empowering students to learn through easy access to scanned book content.
 
-## Problem
+## Features and Benefits Emphasis
 
-* Physical textbooks can be expensive and cumbersome.
-* Access to libraries and study materials might be limited.
+Finereads.in transforms the way students interact with their books. Scan sections for easy digital access, take notes directly within the content, and collaborate with peers for better understanding
 
 ## Solution
 
