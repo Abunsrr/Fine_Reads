@@ -1,0 +1,43 @@
+
+  .dropdown:hover {
+    display: block;
+  }
+
+  .dropdown:hover a {
+    color: #4dc0b5; /* Change the color on hover */
+  }
+
+ 
+  @media (max-width: 767px) {
+  .dropdown-menu {
+   position: relative; /* Change to relative positioning  */
+      display: none;
+     
+    }
+
+   .dropdown:hover .dropdown-menu {
+      display: block;
+       position: relative; /* Change to absolute positioning on hover  */
+      z-index: 1000;
+      width: 100%; 
+   }
+    .dropdown-menu li:hover{
+     border: 1px solid gray;
+   } 
+   
+  }
+
+
+    .dot {
+      width: 15px;
+      height: 15px;
+      margin: 0 5px;
+      border-radius: 50%;
+      cursor: pointer;
+      
+    }
+ 
+    .active {
+     color: rgb(196, 78, 78);
+     
+    }
