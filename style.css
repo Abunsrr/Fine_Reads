@@ -1,11 +1,14 @@
 
   .dropdown:hover {
     display: block;
+    
   }
 
-  .dropdown:hover a {
-    color: #4dc0b5; /* Change the color on hover */
-  }
+  .active {
+    background-color: #e75480; /* Dark pink color */
+    padding: 1px;
+    border-radius: 5px;
+}
 
  
   @media (max-width: 767px) {
@@ -38,6 +41,6 @@
     }
  
     .active {
-     color: rgb(196, 78, 78);
+     color: rgb(116, 7, 7);
      
     }
