@@ -1,8 +1,47 @@
-
+*{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
   .dropdown:hover {
     display: block;
     
   }
+
+/* grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  height: 250px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.grid-item {
+  background-color: #f2f3f3;
+  padding: 1rem;
+  border-radius: 8px;
+  
+}
+
+.arrow-btn {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 
   .active {
     background-color: #e75480; /* Dark pink color */

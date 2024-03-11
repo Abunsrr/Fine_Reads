@@ -135,7 +135,7 @@ toggleBtn.addEventListener('click', () => {
 menuVisible = !menuVisible;
 collapseMenu.classList.toggle('hidden', !menuVisible);
 toggleBtn.innerHTML = menuVisible ?
-'<span style="font-size : 30px;">×</span>' : '<span style="font-size: 26px;">☰</span>';
+'<span style="font-size : 30px;">×</span>' : '<span style="font-size: 26px; ">☰</span>';
 });
 });
 
