@@ -3,11 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nursery Books</title>
+  <title>Nursery eBooks | FineReads Learning!</title>
  <script src="https://cdn.tailwindcss.com"></script>
  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
  <link rel="stylesheet" href="style.css">
+ <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+ <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+ <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+ <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+ <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+ <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+ <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+ <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+ <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="favicon/android-icon-36x36.png">
+ <link rel="icon" type="image/png" sizes="96x96" href="favicon/android-icon-96x96.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+ <link rel="manifest" href="favicon/manifest.json">
+ <meta name="msapplication-TileColor" content="#ffffff">
+ <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+ <meta name="theme-color" content="#ffffff">
+
 <style>
  .shadow-text {
   text-shadow:
@@ -42,20 +60,26 @@
       </div> 
 
       <ul id="collapseMenu" class='lg:!flex lg:space-x-5 max-lg:space-y-2 max-lg:hidden max-lg:py-4 max-lg:w-full '>
-        <li class='max-lg:border-b  max-lg:py-2 px-3 max-lg:rounded active'>
+        <li class='max-lg:border-b  max-lg:py-2 px-3 max-lg:rounded '>
           <a href='/'
             class= 'text-white hover:text-cyan-700  block font-semibold text-[15px]'>Home</a>
         </li>
 
         <li class='dropdown relative max-lg:border-b max-lg:py-2 px-3 max-lg:rounded 
-        text-white hover:text-cyan-700  block font-semibold text-[15px]'> Class <span class="text-white">▼</span></a>
+        text-white hover:text-cyan-700  block font-semibold text-[15px] active'> Class <span class="text-white">▼</span></a>
               
-              <ul class= 'dropdown-menu  absolute  shadow-lg bg-gray-500  z-[1000] w-40 rounded-lg overflow-auto hidden'>
-                <li class='py-2.5 px-6 hover:bg-blue-200 text-black text-[16px] cursor-pointer'>Nursery </li>
-                <li class='py-2.5 px-6 hover:bg-blue-200 text-black text-[16px] cursor-pointer'>Prep</li>
-                <li class='py-2.5 px-6 hover:bg-blue-200 text-black text-[16px]  cursor-pointer'>LKG</li>
-                <li class='py-2.5 px-6 hover:bg-blue-200 text-black text-[16px]   cursor-pointer'>UKG</li>
-              </ul>
+           
+        <ul class= 'dropdown-menu  absolute  shadow-lg bg-gray-500  z-[1000] w-40 rounded-lg overflow-auto hidden'>
+          <a href="nurseryseries.html"> <li class=' relative max-lg:border-b max-lg:py-2 px-3 max-lg:rounded 
+           text-white hover:text-cyan-700  block font-semibold text-[15px] py-2.5 px-6 hover:bg-blue-200 text-black text-[16px] cursor-pointer'>Nursery 
+           </li></a>
+
+           <a href="#"><li class='py-2.5 px-6 hover:bg-blue-200 text-white text-[16px] cursor-pointer'>Prep</li></a>
+
+         <a href="lkgseries.html"> <li class='py-2.5 px-6 hover:bg-blue-200 text-white text-[16px]  cursor-pointer'>LKG</li></a>
+
+          <a href="ukgseries.html"> <li class='py-2.5 px-6 hover:bg-blue-200 text-white text-[16px]   cursor-pointer'>UKG</li> </a>
+         </ul>
             
         </li>
         <li class='max-lg:border-b max-lg:py-2 px-3 max-lg:rounded'><a href='/test.html'
