@@ -116,23 +116,68 @@
     </div>
   </header>
 
-  <div class="flex items-center justify-center h-screen">
-    <div class="text-gray-400 text-3xl animate-pulse">
-      Coming Soon..............
-    </div>
-  </div>
-
-
-
  
 
-
-
-
-
-
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Generator</title>
+  <style>
+  /* Add your CSS styles here */
+  /* Keep it simple and child-friendly */
+  </style>
+  </head>
+  <body>
+  <div id="testGenerator">
+    <h1>Test Generator</h1>
+    <label for="classLevel">Select Class Level:</label>
+    <select id="classLevel">
+      <option value="nursery">Nursery</option>
+      <option value="lkg">LKG</option>
+      <option value="ukg">UKG</option>
+    </select>
+    <label for="subject">Select Subject:</label>
+    <select id="subject">
+      <option value="english">English</option>
+      <option value="math">Math</option>
+      <option value="science">Science</option>
+      <!-- Add more subjects as needed -->
+    </select>
+    <label for="numQuestions">Number of Questions:</label>
+    <input type="number" id="numQuestions" min="1" max="20" value="10">
+    <button onclick="generateTest()">Generate Test</button>
+    <div id="generatedTest"></div>
+  </div>
+  <script>
+  function generateTest() {
+    var classLevel = document.getElementById("classLevel").value;
+    var subject = document.getElementById("subject").value;
+    var numQuestions = document.getElementById("numQuestions").value;
+    
+    // Use AJAX to fetch questions from a database based on classLevel and subject
+    
+    // Display the generated test on the page
+    var testHTML = "<h2>Generated Test</h2>";
+    // Generate test questions dynamically based on fetched data
+    for (var i = 1; i <= numQuestions; i++) {
+      // Generate each question and append to testHTML
+      // You can format questions and options here
+      testHTML += "<p>Question " + i + ": [Question Text]</p>";
+      testHTML += "<ul>";
+      // Add options for multiple-choice questions
+      testHTML += "<li>[Option 1]</li>";
+      testHTML += "<li>[Option 2]</li>";
+      // Add more options as needed
+      testHTML += "</ul>";
+    }
+    document.getElementById("generatedTest").innerHTML = testHTML;
+  }
+  </script>
+  </body>
+  </html>
   
-
 
 
 
