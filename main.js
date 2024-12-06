@@ -141,7 +141,7 @@ const faviconLinks = [
 ];
 
 
-// Function to dynamically append favicons to the head
+
 function addFavicons() {
   const head = document.head || document.getElementsByTagName('head')[0];
   faviconLinks.forEach(favicon => {
@@ -153,3 +153,5 @@ function addFavicons() {
 
 // Call the function to add favicons
 addFavicons();
+
+
