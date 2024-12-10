@@ -15,7 +15,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// return btn creted
 
+let returnDiv = document.createElement('div')
+    console.log(returnDiv);
+     let returnElement = document.querySelector('#dynamicHeader')
+ let body=document.body
+returnDiv.setAttribute('id','dynamicHeader')
+body.prepend(returnDiv)
 
 // menu for return home 
 // Function to dynamically create the header
