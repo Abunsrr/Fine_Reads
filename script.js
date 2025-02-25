@@ -46,3 +46,8 @@
       showGrids();
     });
   
+
+  
+  document.getElementById('toggle').addEventListener('click', () => {
+    document.getElementById('collapseMenu').classList.toggle('max-lg:hidden');
+  });
