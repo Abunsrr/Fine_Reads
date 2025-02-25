@@ -64,6 +64,7 @@
         message.classList.remove('hidden', 'text-red-500');
         message.classList.add('text-green-500');
         message.textContent = 'Rhyme added successfully!';
+        document.getElementById('rhymeForm').reset()
       } catch (error) {
         console.error('Error adding rhyme:', error);
         const message = document.getElementById('message');
