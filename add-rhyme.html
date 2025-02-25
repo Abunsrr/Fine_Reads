@@ -32,9 +32,6 @@
       <label class="block mb-2">Video ID:</label>
       <input type="text" id="videoId" class="border p-2 w-full mb-3" required>
 
-      <label class="block mb-2">Duration:</label>
-      <input type="text" id="duration" class="border p-2 w-full mb-3" required>
-
       <button type="submit" class="bg-blue-500 text-white p-2 rounded w-full">Add Rhyme</button>
     </form>
     <p id="message" class="mt-3 text-center hidden"></p>
@@ -48,8 +45,7 @@
         title: document.getElementById('title').value,
         series: document.getElementById('series').value,
         class: document.getElementById('class').value,
-        videoId: document.getElementById('videoId').value,
-        duration: document.getElementById('duration').value
+        videoId: document.getElementById('videoId').value
       };
   
       try {

@@ -1,50 +1,50 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const carousel = document.getElementById("carouselExampleCaptions");
-  const prevButton = document.querySelector("[data-twe-slide='prev']");
-  const nextButton = document.querySelector("[data-twe-slide='next']");
-  const indicators = document.querySelectorAll("[data-twe-carousel-indicators] button");
+// document.addEventListener("DOMContentLoaded", function () {
+//   const carousel = document.getElementById("carouselExampleCaptions");
+//   const prevButton = document.querySelector("[data-twe-slide='prev']");
+//   const nextButton = document.querySelector("[data-twe-slide='next']");
+//   const indicators = document.querySelectorAll("[data-twe-carousel-indicators] button");
 
-  let currentIndex = 0;
-  let autoSlideInterval;
+//   let currentIndex = 0;
+//   let autoSlideInterval;
 
-  const showSlide = (index) => {
-    const slides = document.querySelectorAll("[data-twe-carousel-item]");
-    slides.forEach((slide, i) => {
-      if (i === index) {
-        slide.classList.remove("hidden");
-        indicators[i].classList.add("text-red-800");
-        slide.classList.add("hidden");
-        indicators[i].classList.remove("text-red-800");
-      }
-    });
-  };
+//   const showSlide = (index) => {
+//     const slides = document.querySelectorAll("[data-twe-carousel-item]");
+//     slides.forEach((slide, i) => {
+//       if (i === index) {
+//         slide.classList.remove("hidden");
+//         indicators[i].classList.add("text-red-800");
+//         slide.classList.add("hidden");
+//         indicators[i].classList.remove("text-red-800");
+//       }
+//     });
+//   };
 
-  const handlePrevClick = () => {
-    currentIndex = (currentIndex - 1 + 3) % 3;
-    showSlide(currentIndex);
-    resetAutoSlide();
-  };
+//   const handlePrevClick = () => {
+//     currentIndex = (currentIndex - 1 + 3) % 3;
+//     showSlide(currentIndex);
+//     resetAutoSlide();
+//   };
 
-  const handleNextClick = () => {
-    currentIndex = (currentIndex + 1) % 3;
-    showSlide(currentIndex);
-    resetAutoSlide();
-  };
+//   const handleNextClick = () => {
+//     currentIndex = (currentIndex + 1) % 3;
+//     showSlide(currentIndex);
+//     resetAutoSlide();
+//   };
 
-  const autoSlide = () => {
-    currentIndex = (currentIndex + 1) % 3;
-    showSlide(currentIndex);
-  };
+//   const autoSlide = () => {
+//     currentIndex = (currentIndex + 1) % 3;
+//     showSlide(currentIndex);
+//   };
 
-  const resetAutoSlide = () => {
-    clearInterval(autoSlideInterval);
-    autoSlideInterval = setInterval(autoSlide, 5000);
-  };
+//   const resetAutoSlide = () => {
+//     clearInterval(autoSlideInterval);
+//     autoSlideInterval = setInterval(autoSlide, 5000);
+//   };
 
-  prevButton.addEventListener("click", handlePrevClick);
-  nextButton.addEventListener("click", handleNextClick);
-  resetAutoSlide();
-});
+//   prevButton.addEventListener("click", handlePrevClick);
+//   nextButton.addEventListener("click", handleNextClick);
+//   resetAutoSlide();
+// });
 
 const showSlide = (index) => {
 const slides = document.querySelectorAll("[data-twe-carousel-item]");
