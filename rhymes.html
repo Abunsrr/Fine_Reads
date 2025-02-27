@@ -220,10 +220,10 @@
 <div>
 <h3 class="text-gray-400 font-semibold mb-2">Series</h3>
 <ul class="space-y-2">
-<li><button data-series="eco" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Eco Series</button></li>
-<li><button data-series="eduventure" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Eduventure</button></li>
-<li><button data-series="star" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Star Series</button></li>
 <li><button data-series="kinder" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Kinder Series</button></li>
+<li><button data-series="eduventure" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Eduventure</button></li>
+<li><button data-series="eco" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Eco Series</button></li>
+<li><button data-series="star" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Star Series</button></li>
 </ul>
 </div>
 
@@ -234,7 +234,7 @@
 <li><button data-class="nursery" class="filter-btn text-white hover:text-cyan-500 w-full text-left">Nursery</button></li>
 <li><button data-class="lkg" class="filter-btn text-white hover:text-cyan-500 w-full text-left">LKG</button></li>
 <li><button data-class="ukg" class="filter-btn text-white hover:text-cyan-500 w-full text-left">UKG</button></li>
-<li><button data-class="kg" class="filter-btn text-white hover:text-cyan-500 w-full text-left">KG</button></li>
+<!-- <li><button data-class="kg" class="filter-btn text-white hover:text-cyan-500 w-full text-left">KG</button></li> -->
 </ul>
 </div>
 </div>
@@ -249,85 +249,10 @@
     </div>
   </main>
   
-  <script>
-    let rhymes = [];
-    let currentSeries = 'all';
-    let currentClass = 'all';
+
   
-    // Fetch rhymes from Sheetson
-    async function fetchRhymes() {
-      try {
-        const response = await fetch('https://api.sheetson.com/v2/sheets/Sheet1', {
-          method: 'GET',
-          headers: {
-            'Authorization': 'Bearer kkGMEAZ4JzwP4-L24-S67x3fvveM4f9fKLvbPi7r9M70eImnZOTaw5OuF2g',
-            'X-Spreadsheet-Id': '1wdz9j9N-XCjhWGL5E4oBpVNZ6fdzmProIK2BO9loQTw'
-          }
-        });
-        if (!response.ok) throw new Error(`Fetch failed: ${response.statusText}`);
-        const data = await response.json();
-        rhymes = data.results; // Sheetson returns rows in 'results'
-        return rhymes;
-      } catch (error) {
-        console.error('Error fetching rhymes:', error);
-        document.getElementById('rhymes-container').innerHTML = 
-          '<p class="text-red-500">Failed to load rhymes. Please try again later.</p>';
-        return [];
-      }
-    }
-  
-    // Render rhymes based on filters
-    async function renderRhymes() {
-      const rhymes = await fetchRhymes();
-      const container = document.getElementById('rhymes-container');
-      let filteredRhymes = rhymes.filter(rhyme => 
-        (currentSeries === 'all' || rhyme.series === currentSeries) &&
-        (currentClass === 'all' || rhyme.class === currentClass)
-      );
-  
-      container.innerHTML = ''; // Clear existing content
-      filteredRhymes.forEach(rhyme => {
-        container.innerHTML += `
-          <div class="widget shadow-lg">
-            <img src="https://img.youtube.com/vi/${rhyme.videoId}/hqdefault.jpg" alt="${rhyme.title}" class="w-full h-40 object-cover">
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">${rhyme.title}</h3>
-              <span class="badge">${rhyme.series}</span>
-              <span class="badge">${rhyme.class}</span>
-              <p class="text-gray-600">Duration: ${rhyme.duration}</p>
-              <a href="https://www.youtube.com/watch?v=${rhyme.videoId}" target="_blank" class="play-btn text-white px-4 py-2 mt-2 inline-block rounded">Play</a>
-            </div>
-          </div>
-        `;
-      });
-    }
-  
-    // Filter button click handler
-    document.querySelectorAll('.filter-btn').forEach(button => {
-      button.addEventListener('click', (e) => {
-        if (e.target.dataset.series) {
-          currentSeries = e.target.dataset.series;
-          document.querySelectorAll('[data-series]').forEach(btn => 
-            btn.classList.toggle('text-cyan-500', btn === e.target));
-        }
-        if (e.target.dataset.class) {
-          currentClass = e.target.dataset.class;
-          document.querySelectorAll('[data-class]').forEach(btn => 
-            btn.classList.toggle('text-cyan-500', btn === e.target));
-        }
-  
-        const params = new URLSearchParams();
-        if (currentSeries !== 'all') params.set('series', currentSeries);
-        if (currentClass !== 'all') params.set('class', currentClass);
-        history.replaceState(null, '', '?' + params.toString());
-  
-        renderRhymes();
-      });
-    });
-  
-    // Initial render
-    document.addEventListener('DOMContentLoaded', renderRhymes);
-  </script>
+  <script src="./rhymeslist.js"></script>
+
   
   <div class="flex-1 md:ml-64">
     <footer class="bg-stone-950 py-12 px-16 font-[sans-serif] rounded-lg">
