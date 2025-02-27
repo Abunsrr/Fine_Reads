@@ -38,9 +38,9 @@
 <style>
 
   main{
-    background: #07757b;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #10b196, #0b8061);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #2e6e66, #7fcd86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #11b7c0;  /* fallback for old browsers */
+   /* background: -webkit-linear-gradient(to right, #10b196, #0b8061);  Chrome 10-25, Safari 5.1-6 */
+/* background: linear-gradient(to right, #2e6e66, #7fcd86); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   }
     /* Enhanced Sidebar Styling */
@@ -147,6 +147,9 @@ background: linear-gradient(to right, #2e6e66, #7fcd86); /* W3C, IE 10+/ Edge, F
       
       .widget {
         margin-bottom: 1rem;
+        width: 90%; /* Reduce width on mobile */
+       
+        margin: 0 auto;
       }
     }
     </style>
@@ -347,6 +350,24 @@ background: linear-gradient(to right, #2e6e66, #7fcd86); /* W3C, IE 10+/ Edge, F
   </script>
 
   
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".widget", {
+    y: -50, /* Moves up */
+    opacity: 1,
+    duration: 1,
+    scrollTrigger: {
+      trigger: ".widget",
+      start: "top 80%", /* Animation starts when widget is 80% into viewport */
+      toggleActions: "play none none reverse",
+    },
+  });
+</script>
+
 
 <script src="../../menu-script.js"></script>
 <script src="../../main.js"></script>
