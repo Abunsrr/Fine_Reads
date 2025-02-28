@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>LKG eBooks | FineReads Learning!</title>
+  <meta name="description" content="FineReads Learning offers a wide range of eBooks for children in LKG, UKG, and more.">
+<meta name="keywords" content="eBooks, LKG, UKG, nursery, educational resources, kids rhymes">
+<meta property="og:title" content="LKG eBooks | FineReads Learning!">
+<meta property="og:description" content="FineReads Learning offers educational resources for young learners.">
+<meta property="og:image" content="/images/finareadslogo.png">
+
+  <title>Rhymes | FineReads Learning!</title>
   <!-- favicon -->
 
  <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +22,7 @@
     2px 2px 4px rgba(84, 59, 59, 0.2), /* Dark inner shadow */
     4px 4px 5px rgba(27, 26, 26, 0.7); /* Light outer shadow */
 }
-
+ 
 @media (max-width: 1024px) { /* Apply styles for tablets and smaller */
   .filters-container {
     display: flex;
@@ -351,22 +356,7 @@
 
   
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script>
-  gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(".widget", {
-    y: -50, /* Moves up */
-    opacity: 1,
-    duration: 1,
-    scrollTrigger: {
-      trigger: ".widget",
-      start: "top 80%", /* Animation starts when widget is 80% into viewport */
-      toggleActions: "play none none reverse",
-    },
-  });
-</script>
 
 
 <script src="../../menu-script.js"></script>
