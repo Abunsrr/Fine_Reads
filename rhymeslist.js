@@ -186,8 +186,7 @@ let rhymes = [
   { "title": "Chunnu munnu", "series": "eco", "class": "lkg", "videoId": "AiR0Z9X9o50" },
   { "title": "Billi Mausi", "series": "eco", "class": "lkg", "videoId": "Lbw2B-KzcfA" },
   { "title": "lala ji ne kela khaya", "series": "eco", "class": "lkg", "videoId": "pzzlYA8dfLs" },
-  { "title": "Billi gai dilli", "series": "eco", "class": "lkg", "videoId": "vWQQwTlY7fQ" },
-
+  { "title": "Billi gai dilli", "series": "eco", "class": "lkg", "videoId": "vWQQwTlY7fQ" }
 ];
 
 
