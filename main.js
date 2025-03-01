@@ -150,9 +150,14 @@ function addFavicons() {
       head.appendChild(tempDiv.firstChild);
   });
 }
+ alert(
+  "ygfru sfvsdgrui  ygs"
+ )
+
 
 // Call the function to add favicons
 addFavicons();
+
 
 
 
