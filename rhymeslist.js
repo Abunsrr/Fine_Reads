@@ -186,7 +186,26 @@ let rhymes = [
   { "title": "Chunnu munnu", "series": "eco", "class": "lkg", "videoId": "AiR0Z9X9o50" },
   { "title": "Billi Mausi", "series": "eco", "class": "lkg", "videoId": "Lbw2B-KzcfA" },
   { "title": "lala ji ne kela khaya", "series": "eco", "class": "lkg", "videoId": "pzzlYA8dfLs" },
-  { "title": "Billi gai dilli", "series": "eco", "class": "lkg", "videoId": "vWQQwTlY7fQ" }
+  { "title": "Billi gai dilli", "series": "eco", "class": "lkg", "videoId": "vWQQwTlY7fQ" },
+  { "title": "Early to bed", "series": "eco", "class": "nursery", "videoId": "1FXGT4UtZCo" },
+  { "title": "Twinkle Twinkle", "series": "eco", "class": "nursery", "videoId": "hqzvHfy-Ij0" },
+  { "title": "Rain,Rain go away", "series": "eco", "class": "nursery", "videoId": "BtDolWTSpV8" },
+  { "title": "Jack and Jill", "series": "eco", "class": "nursery", "videoId": "3hRfEUu-G-g" },
+  { "title": "Row,Row", "series": "eco", "class": "nursery", "videoId": "fDR_pRHYMGA" },
+  { "title": "Humpty dumpty", "series": "eco", "class": "nursery", "videoId": "AIIj0mBX1jU" },
+  { "title": "Jhonny jhonny", "series": "eco", "class": "nursery", "videoId": "F4tHL8reNCs" },
+  { "title": "Teddy bear", "series": "eco", "class": "nursery", "videoId": "7X0Q4F--g0s" },
+  { "title": "Wheels on the bus", "series": "eco", "class": "nursery", "videoId": "pPTT_cowCtY" },
+  { "title": "Five little Ducks", "series": "eco", "class": "nursery", "videoId": "-ccCPcujnys" },
+  { "title": "one two buckle my shoe", "series": "eco", "class": "nursery", "videoId": "UYuFdJaqHOE" },
+  { "title": "Ba ba black sheep", "series": "eco", "class": "nursery", "videoId": "MR5XSOdjKMA" },
+  { "title": "Machli jal ki rani", "series": "eco", "class": "nursery", "videoId": "DukYkulCT3U" },
+  { "title": "Roj Savere", "series": "eco", "class": "nursery", "videoId": "-0h_ktBkVvI" },
+  { "title": "Maa", "series": "eco", "class": "nursery", "videoId": "LhGSlNfXutQ" },
+  { "title": "Duniya Gol", "series": "eco", "class": "nursery", "videoId": "67Yd2iYTI_o" },
+  { "title": "Aaloo", "series": "eco", "class": "nursery", "videoId": "1mJ7MNiHwdI" },
+  { "title": "Hathi Raja", "series": "eco", "class": "nursery", "videoId": "-pTz1zesK9s" },
+  { "title": "Baarish aai cham cham", "series": "eco", "class": "nursery", "videoId": "4Lw-P3ykE6w" }
 ];
 
 
