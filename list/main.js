@@ -37,3 +37,32 @@ addFavicons();
 
 
 
+(function () {
+  const isMobile = window.innerWidth <= 640;
+
+  // base sizes
+  const sizes = isMobile
+    ? { w: 360, h: 310 }   // mobile
+    : { w: 520, h: 455 };  // desktop
+
+  document.querySelectorAll('img').forEach(img => {
+    const src = img.getAttribute('src');
+
+    // Only target Pexels images
+    if (!src || !src.includes('images.pexels.com')) return;
+
+    // Remove existing query params
+    const cleanSrc = src.split('?')[0];
+
+    // Build optimized URL
+    const optimizedSrc =
+      `${cleanSrc}?auto=compress&cs=tinysrgb&w=${sizes.w}&h=${sizes.h}&fm=webp`;
+
+    img.src = optimizedSrc;
+    img.loading = 'lazy';
+    img.width = sizes.w;
+    img.height = sizes.h;
+  });
+})();
+
+
